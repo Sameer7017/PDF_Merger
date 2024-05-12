@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://unpkg.com/pdf-lib"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .block1 {
+          display: block;
+          width: 100%;
+          border: none;
+          background-color:white;
+          color: white;
+          padding: 14px 28px;
+          font-size: 16px;
+          cursor: pointer;
+          text-align: center;
+        }
+        .block2 {
+          display: block;
+          width: 80%;
+          border: 2 px solid black;
+          background-color: #04AA6D;
+          color: white;
+          padding: 14px 28px;
+          font-size: 16px;
+          cursor: pointer;
+          text-align: center;
+        }
+        
+        .block:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        </style>
+<script src=
+"https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="block1" href='index.html'>
+            <img src="abc.jpeg"  width="70" height="70">
+          </a>
+        </div>
+      </nav>
+      
+<!-- <hr width="40%" size="30" color="black"><br> -->
+      <center>
+    
+
+    <div class="card" style="width: 30rem; height: 20rem; border: 2px solid green;">
+        <div class="card-body">
+          <h5 class="card-title"><u>Merge Your Lifes And Merge Pdfs</u></h5><br><br>
+          <input type="file" id="pdfInput" accept=".pdf" multiple ><br><br>
+    <button type="button" class="block2" onclick="merge()">Merge PDFs</button>
+    <h4><!-- Selected file will get here --></h4>
+        </div>
+      </div></center>
+
+      <script>
+        $(document).ready(function () {
+            $('input[type="file"]').change(function (e) {
+                const geekss = e.target.files[0].name;
+                $("h4").text(geekss + ' is the selected file.');
+            });
+        });
+    </script>
+</body>
+<script src="index.js"></script>
+
+</html>
